@@ -1,0 +1,14 @@
+[MAIN]
+# Pickle collected data for later comparisons.
+persistent=no
+
+[MESSAGES CONTROL]
+# Reasoning for wide warning ignore
+# ---------------------------------
+# import-error
+#     This is to fix our Jenkins CI where we do not have all the build
+#     requirements for all our sub-components.  We can afford not listening to
+#     this error because our packaging CI would discover the problems anyways.
+disable=import-error
+
+module-rgx=(hello-world-python|[0-9a-f]{12}_[a-z_]+|[a-z_][a-z0-9_]{2,30})$
